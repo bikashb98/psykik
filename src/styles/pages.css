@@ -1,0 +1,173 @@
+.hero {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+  padding-top: 28px;
+}
+
+.hero h1 {
+  color: var(--ink);
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  max-width: 16ch;
+}
+
+.hero .lead {
+  max-width: 58ch;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.stat-row {
+  display: grid;
+  gap: 10px;
+}
+
+.dashboard .stat-row {
+  grid-template-columns: 1fr;
+}
+
+.stat-card h3 {
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.grid-3,
+.grid-2,
+.grid-4 {
+  display: grid;
+  gap: 14px;
+}
+
+.approach {
+  display: grid;
+  gap: 12px;
+}
+
+.approach-step {
+  position: relative;
+}
+
+.approach-step .num {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 13px;
+}
+
+.audience-card .btn {
+  margin-top: auto;
+}
+
+.audience-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 100%;
+}
+
+.trust-list {
+  display: grid;
+  gap: 12px;
+}
+
+.trust-list li {
+  list-style: none;
+}
+
+.cta-band {
+  border: 1px solid var(--line-strong);
+  border-radius: 24px;
+  padding: 32px 24px;
+  background:
+    linear-gradient(135deg, rgba(184, 255, 60, 0.08), rgba(126, 240, 200, 0.04));
+  display: grid;
+  gap: 16px;
+}
+
+.cta-band h2 {
+  color: var(--ink);
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  letter-spacing: -0.03em;
+}
+
+.split {
+  display: grid;
+  gap: 24px;
+}
+
+.product-block {
+  display: grid;
+  gap: 10px;
+}
+
+.product-block h3 {
+  color: var(--ink);
+}
+
+.solution-section {
+  display: grid;
+  gap: 16px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+
+.meta-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.meta-grid h4 {
+  color: var(--ink);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.values {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 700px) {
+  .grid-2,
+  .stat-row,
+  .split,
+  .meta-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dashboard .stat-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .hero {
+    grid-template-columns: 0.95fr 1.05fr;
+    padding-top: 48px;
+  }
+
+  .grid-4,
+  .approach {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cta-band {
+    grid-template-columns: 1.4fr 0.8fr;
+    align-items: center;
+    padding: 48px;
+  }
+}
